@@ -2,7 +2,7 @@
 # install dotfiles for specified program list
 
 # List of program directories to strip and link
-dirs=("hypr" "alacritty" "waybar" "wlogout" "fastfetch" "waypaper" "wal" "niri" )
+dirs=("hypr" "alacritty" "waybar" "wlogout" "fastfetch" "waypaper" "wal" "niri" "easyeffects" )
 
 # Base paths
 config_dir="$HOME/.config"
