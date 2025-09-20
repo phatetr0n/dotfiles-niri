@@ -19,8 +19,9 @@
             "browser": "",
             "discord": "",
             "chat": "<b></b>",
+            "easyeffects": "",
             // Icons by state
-            "active": "",
+            // "active": "",
             "default": ""
         },
     },
