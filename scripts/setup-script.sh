@@ -11,6 +11,8 @@ sudo dnf -y copr enable alternateved/eza # eza
 
 # Tools
 sudo dnf -y install libnotify qt5-qtwayland qt6-qtwayland python-pip python3-pip nm-connection-editor network-manager-applet fuse ImageMagick NetworkManager-tui flatpak fastfetch figlet
+# enable flathub repo to flatpak
+flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
 
 # Niri DWM
 sudo dnf -y install niri
@@ -64,11 +66,13 @@ echo "<?xml version=\"1.0\"?><!DOCTYPE fontconfig SYSTEM \"fonts.dtd\">
  <dir>~/.fonts</dir>
 </fontconfig>" > $HOME/.fonts.config
 
+# Assign dark mode for gtk
+dconf write /org/gnome/desktop/interface/color-scheme '"prefer-dark"'
+
 # prevent wal lockup by assigning bg
 cp $HOME/dotfiles/.extra/wallpaper.jpg /var/tmp/wp.png
 wal -i /var/tmp/wp.png
 
-# Assign dark mode for gtk
-dconf write /org/gnome/desktop/interface/color-scheme '"prefer-dark"'
+
 
 
