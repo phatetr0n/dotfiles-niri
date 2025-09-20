@@ -1,0 +1,20 @@
+# pywal16 import
+general.import = ["~/.cache/wal/colors-alacritty.toml"]
+general.live_config_reload = true
+
+[font]
+size = 11.0
+
+[font.normal]
+family = "MesloLGS NF"
+# style = "Regular"
+
+[window]
+opacity = 0.8
+
+[window.padding]
+x = 15
+y = 15
+
+[selection]
+save_to_clipboard = true
