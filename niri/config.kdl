@@ -263,6 +263,7 @@ spawn-at-startup "~/dotfiles/scripts/background-blur.sh"
 spawn-at-startup "easyeffects"
 spawn-at-startup "webcord"
 spawn-at-startup "waybar"
+spawn-at-startup "steam"
 spawn-at-startup "xwayland-satellite"
 spawn-at-startup "/usr/lib/polkit-1/polkit-agent-helper-1"
 
