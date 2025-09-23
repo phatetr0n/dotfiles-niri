@@ -48,10 +48,10 @@ layout {
     // You can change how the focus ring looks.
     focus-ring {
         width 4
-        active-gradient from="#5C7389" to="#9B5377" angle=125
-        active-color "#485783"
-        inactive-color "#c1c5cc"
-        urgent-color "#E75B5B"
+        active-gradient from="#94A2B1" to="#8A7D74" angle=125
+        active-color "#6E91A9"
+        inactive-color "#c2c3c5"
+        urgent-color "#517689"
 
         // Uncomment this line to disable the focus ring.
         off
@@ -84,10 +84,10 @@ layout {
         // off
 
         width 2
-        active-gradient from="#375983" to="#5C7389" angle=45
-        // active-color "#5C7389"
-        inactive-color "#616876"
-        urgent-color "#9B5377"
+        active-gradient from="#62869B" to="#94A2B1" angle=45
+        active-color "#94A2B1"
+        inactive-color "#5a616e"
+        urgent-color "#8A7D74"
 
         // active-gradient from="#ffbb66" to="#ffc880" angle=45 relative-to="workspace-view"
         // inactive-gradient from="#505050" to="#808080" angle=45 relative-to="workspace-view"
@@ -140,6 +140,13 @@ layout {
         // right 64
         // top 64
         // bottom 64
+    }
+
+    // insert hint colour when moving windows around
+    insert-hint {
+        // off
+        color "#62869B"
+        gradient from="#62869B" to="#94A2B1" angle=45
     }
 }
 // END_THEME
@@ -214,6 +221,7 @@ input {
 // Find more information on the wiki:
 // https://github.com/YaLTeR/niri/wiki/Configuration:-Outputs
 // Remember to uncomment the node by removing "/-"!
+
 output "DP-1" {
     // Uncomment this line to disable this output.
     // off

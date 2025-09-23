@@ -85,7 +85,7 @@ layout {
 
         width 2
         active-gradient from="${COLOR4}" to="${COLOR6}" angle=45
-        // active-color "${COLOR6}"
+        active-color "${COLOR6}"
         inactive-color "${COLOR8}"
         urgent-color "${COLOR1}"
 
@@ -140,6 +140,13 @@ layout {
         // right 64
         // top 64
         // bottom 64
+    }
+
+    // insert hint colour when moving windows around
+    insert-hint {
+        // off
+        color "${COLOR4}"
+        gradient from="${COLOR4}" to="${COLOR6}" angle=45
     }
 }
 // END_THEME
