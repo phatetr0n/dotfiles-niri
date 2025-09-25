@@ -48,10 +48,10 @@ layout {
     // You can change how the focus ring looks.
     focus-ring {
         width 4
-        active-gradient from="#94A2B1" to="#8A7D74" angle=125
-        active-color "#6E91A9"
-        inactive-color "#c2c3c5"
-        urgent-color "#517689"
+        active-gradient from="#A8CE88" to="#3F8D62" angle=125
+        active-color "#77B188"
+        inactive-color "#c4c8ca"
+        urgent-color "#54986D"
 
         // Uncomment this line to disable the focus ring.
         off
@@ -84,10 +84,10 @@ layout {
         // off
 
         width 2
-        active-gradient from="#62869B" to="#94A2B1" angle=45
-        active-color "#94A2B1"
-        inactive-color "#5a616e"
-        urgent-color "#8A7D74"
+        active-gradient from="#8FBA7A" to="#A8CE88" angle=45
+        active-color "#A8CE88"
+        inactive-color "#627078"
+        urgent-color "#3F8D62"
 
         // active-gradient from="#ffbb66" to="#ffc880" angle=45 relative-to="workspace-view"
         // inactive-gradient from="#505050" to="#808080" angle=45 relative-to="workspace-view"
@@ -145,8 +145,8 @@ layout {
     // insert hint colour when moving windows around
     insert-hint {
         // off
-        color "#62869B"
-        gradient from="#62869B" to="#94A2B1" angle=45
+        color "#8FBA7A"
+        gradient from="#8FBA7A" to="#A8CE88" angle=45
     }
 }
 // END_THEME
@@ -154,6 +154,11 @@ layout {
 // "/-" comments out the following node.
 // Check the wiki for a full description of the configuration:
 // https://github.com/YaLTeR/niri/wiki/Configuration:-Introduction
+
+// Remove hotkey overlay on launch
+hotkey-overlay {
+    skip-at-startup
+}
 
 // Input device configuration.
 // Find the full list of options on the wiki:
