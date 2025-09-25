@@ -6,7 +6,7 @@ swayidle -w \
     resume 'niri msg action power-on-monitors' &
 
 # lock screen
-swaylock -i /var/tmp/wp_blur.png
+hyprlock
 
 # kill newest swayidle so it doesn't keep carrying on
 pkill --newest swayidle
