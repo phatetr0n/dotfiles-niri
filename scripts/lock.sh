@@ -1,12 +1,12 @@
-#!/bin/bash
-
-# if idle for 15s power down output
+#!/usr/bin/env bash
+# if idle for 15s after lock generate a temp counter
 swayidle -w \
     timeout 15 'niri msg action power-off-monitors' \
     resume 'niri msg action power-on-monitors' &
+tempidle_pid=$!
 
-# lock screen
+# lock the screen
 hyprlock
 
-# kill newest swayidle so it doesn't keep carrying on
-pkill --newest swayidle
+# after unlock kill temp counter
+kill "$tempidle_pid"
