@@ -10,7 +10,7 @@ sudo dnf -y copr enable solopasha/hyprland # hypr utilities
 sudo dnf -y copr enable alternateved/eza # eza
 
 # Tools
-sudo dnf -y install libnotify qt5-qtwayland qt6-qtwayland python-pip python3-pip nm-connection-editor network-manager-applet fuse ImageMagick NetworkManager-tui flatpak fastfetch figlet
+sudo dnf -y install libnotify qt5-qtwayland qt6-qtwayland python-pip python3-pip nm-connection-editor network-manager-applet fuse ImageMagick NetworkManager-tui flatpak fastfetch figlet xclip
 # enable flathub repo to flatpak
 flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
 
