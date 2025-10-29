@@ -10,6 +10,11 @@ __   _______     ____  _     ____
 
 EOF
 
+# you'll need to provide cookies; make a profile and log in to youtube then point yt-dlp to it (firefox is in ~/.mozilla subfolders)
+# changeable variables here for ease of access
+browser="firefox"
+profile="jy0ia58h.yt-dlp"
+
 # ask user for video/playlist url and quality
 read -p "Enter video or playlist URL: " url
 read -p "Enter desired quality (720, 1080, etc): " quality
@@ -23,23 +28,32 @@ else
     mkdir -p -- "$outdir"
 fi
 
+# quality selection block; prefer h.264 mp4 at rq height
+mqs="b[height<=${quality}]/b"
+sortq="res:${quality},codec:h264,ext:mp4"
+
+# options for yt-dlp
+cargs=(
+  -f "$mqs"
+  -S "$sortq"
+  --merge-output-format mp4
+  --no-post-overwrites
+  --cookies-from-browser "$browser:$profile"
+  -o "%(title)s.%(ext)s"
+  -P "$outdir"
+)
+
 # yt-dlp download with options passed through
 echo "Downloading $url at ${quality}p..."
 if [[ "$ynmp3" =~ ^[Yy]$ ]]; then
-    yt-dlp -f "bestvideo[height<="$quality"]+bestaudio/best" \
-        --merge-output-format mp4 \
+    yt-dlp \
+        "${cargs[@]}" \
         --extract-audio --audio-format mp3 --audio-quality 0 \
-        --keep-video --no-post-overwrites \
-        -o "%(title)s.%(ext)s" \
-        -P "$outdir" \
+        --keep-video \
         "$url"
 else
     echo "Skipping MP3 extraction..."
-    yt-dlp -f "bestvideo[height<="$quality"]+bestaudio/best" \
-        --merge-output-format mp4 \
-        --no-post-overwrites \
-        -o "%(title)s.%(ext)s" \
-        -P "$outdir" \
+    yt-dlp "${cargs[@]}" \
         "$url"
 fi
 
