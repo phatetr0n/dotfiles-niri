@@ -48,10 +48,10 @@ layout {
     // You can change how the focus ring looks.
     focus-ring {
         width 4
-        active-gradient from="#FFD8A6" to="#A8584D" angle=125
-        active-color "#FFD5A3"
-        inactive-color "#c6c2c6"
-        urgent-color "#F58B33"
+        active-gradient from="#739AC4" to="#3F6883" angle=125
+        active-color "#6E91AD"
+        inactive-color "#c8c8c9"
+        urgent-color "#52748D"
 
         // Uncomment this line to disable the focus ring.
         off
@@ -84,10 +84,10 @@ layout {
         // off
 
         width 2
-        active-gradient from="#ECA361" to="#FFD8A6" angle=45
-        active-color "#FFD8A6"
-        inactive-color "#705b70"
-        urgent-color "#A8584D"
+        active-gradient from="#64889D" to="#739AC4" angle=45
+        active-color "#739AC4"
+        inactive-color "#65657c"
+        urgent-color "#3F6883"
 
         // active-gradient from="#ffbb66" to="#ffc880" angle=45 relative-to="workspace-view"
         // inactive-gradient from="#505050" to="#808080" angle=45 relative-to="workspace-view"
@@ -145,8 +145,8 @@ layout {
     // insert hint colour when moving windows around
     insert-hint {
         // off
-        color "#ECA361"
-        gradient from="#ECA361" to="#FFD8A6" angle=45
+        color "#64889D"
+        gradient from="#64889D" to="#739AC4" angle=45
     }
 }
 // END_THEME
